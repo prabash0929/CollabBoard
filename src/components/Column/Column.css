@@ -1,0 +1,79 @@
+.column {
+  background: #f8faff;
+  border: 1px solid #e5eaf5;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 150px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+/* Column Header */
+.column-title {
+  padding: 15px 18px;
+  background: linear-gradient(
+    135deg,
+    #f1f5ff,
+    #eef2ff
+  );
+
+  border-bottom: 1px solid #e2e8f0;
+
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* Task Area */
+.column .card-body {
+  padding: 14px;
+}
+
+/* Empty column */
+.column .card-body:empty {
+  min-height: 100px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .column {
+    margin-bottom: 15px;
+  }
+}
+.column {
+  background: #f8fafc;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  min-height: 180px;
+  transition: 0.3s ease;
+}
+
+.column-title {
+  padding: 16px 18px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #1e293b;
+  background: #f1f5ff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.card-body {
+  padding: 14px;
+}
+
+/* Dark Mode */
+
+body.dark-mode .column {
+  background: #111827;
+  border-color: #334155;
+}
+
+body.dark-mode .column-title {
+  background: #1e293b;
+  color: #f8fafc;
+  border-bottom-color: #475569;
+}
+
+body.dark-mode .card-body {
+  background: #111827;
+}
