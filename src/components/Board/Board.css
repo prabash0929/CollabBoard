@@ -1,0 +1,320 @@
+/* =========================================
+   COLLABBOARD - BOARD UI
+========================================= */
+
+.board-container {
+  width: 100%;
+}
+
+/* =========================================
+   TOP ACTION BAR
+========================================= */
+
+.board-toolbar {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px 22px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 25px rgba(30, 41, 59, 0.06);
+}
+
+.board-toolbar .form-control {
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  padding-left: 16px;
+}
+
+.board-toolbar .form-control:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.add-task-btn {
+  height: 44px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  box-shadow: 0 6px 15px rgba(79, 70, 229, 0.22);
+  transition: all 0.2s ease;
+}
+
+.add-task-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 9px 20px rgba(79, 70, 229, 0.28);
+}
+
+/* =========================================
+   BOARD COLUMNS
+========================================= */
+
+.board-columns {
+  align-items: flex-start;
+}
+
+.board-column-wrapper {
+  margin-bottom: 20px;
+}
+
+.column {
+  background: #f8fafc;
+  border: 1px solid #e8edf5;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 180px;
+  height: auto;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+}
+
+.column-title {
+  padding: 15px 18px;
+  background: linear-gradient(
+    135deg,
+    #f8faff,
+    #eef2ff
+  );
+  border-bottom: 1px solid #e5eaf3;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+  text-align: left;
+}
+
+.column .card-body {
+  padding: 12px;
+  min-height: 110px;
+}
+
+/* =========================================
+   EMPTY COLUMN
+========================================= */
+
+.column .card-body:empty {
+  min-height: 100px;
+}
+
+/* =========================================
+   MODAL
+========================================= */
+
+.modal-content {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.18);
+}
+
+.modal-header {
+  padding: 18px 22px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.modal-title {
+  font-weight: 700;
+}
+
+.modal-body {
+  padding: 22px;
+}
+
+.modal-footer {
+  padding: 16px 22px;
+  border-top: 1px solid #eef2f7;
+}
+
+.modal-body .form-control,
+.modal-body .form-select {
+  border-radius: 10px;
+  border: 1px solid #dfe5ee;
+  min-height: 42px;
+}
+
+.modal-body textarea.form-control {
+  min-height: 90px;
+}
+
+.modal-body .form-control:focus,
+.modal-body .form-select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+/* =========================================
+   TOAST
+========================================= */
+
+.toast {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 992px) {
+  .board-toolbar {
+    padding: 16px;
+  }
+
+  .column {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .board-toolbar {
+    border-radius: 14px;
+  }
+
+  .board-toolbar .row {
+    gap: 10px;
+  }
+
+  .board-toolbar .col-md-6 {
+    width: 100%;
+  }
+
+  .column-title {
+    padding: 13px 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .board-toolbar {
+    padding: 14px;
+    margin-bottom: 16px;
+  }
+
+  .add-task-btn {
+    width: 100%;
+  }
+
+  .column {
+    border-radius: 13px;
+  }
+}
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+.dark-mode .board-toolbar,
+body.dark-mode .board-toolbar {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: none;
+}
+
+.dark-mode .board-toolbar .form-control,
+body.dark-mode .board-toolbar .form-control {
+  background: #0f172a;
+  color: #e2e8f0;
+  border-color: #334155;
+}
+
+.dark-mode .board-toolbar .form-control::placeholder,
+body.dark-mode .board-toolbar .form-control::placeholder {
+  color: #94a3b8;
+}
+
+.dark-mode .column,
+body.dark-mode .column {
+  background: #111827;
+  border-color: #334155;
+  box-shadow: none;
+}
+
+.dark-mode .column-title,
+body.dark-mode .column-title {
+  background: #1e293b;
+  color: #f1f5f9;
+  border-color: #334155;
+}
+
+.dark-mode .modal-content,
+body.dark-mode .modal-content {
+  background: #1e293b;
+  color: #f1f5f9;
+}
+
+.dark-mode .modal-header,
+.dark-mode .modal-footer,
+body.dark-mode .modal-header,
+body.dark-mode .modal-footer {
+  border-color: #334155;
+}
+
+.dark-mode .modal-body .form-control,
+.dark-mode .modal-body .form-select,
+body.dark-mode .modal-body .form-control,
+body.dark-mode .modal-body .form-select {
+  background: #0f172a;
+  color: #f1f5f9;
+  border-color: #334155;
+}
+
+.dark-mode .modal-body .form-control::placeholder,
+body.dark-mode .modal-body .form-control::placeholder {
+  color: #64748b;
+}
+/* Add Task Button */
+.add-task-btn {
+  border: none;
+  padding: 11px 24px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0 6px 15px rgba(79, 70, 229, 0.25);
+  transition: all 0.2s ease;
+}
+
+.add-task-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.35);
+}
+/* ============================= */
+/* DARK MODE */
+/* ============================= */
+
+body.dark-mode {
+  background: #0f0f0f;
+  color: #f8fafc;
+}
+
+body.dark-mode .board-container {
+  background: #0f0f0f;
+}
+
+body.dark-mode .board-toolbar {
+  background: #1e293b;
+}
+
+body.dark-mode .board-toolbar .form-control {
+  background: #0f172a;
+  color: #f8fafc;
+  border-color: #475569;
+}
+
+body.dark-mode .board-toolbar .form-control::placeholder {
+  color: #94a3b8;
+}
+
+body.dark-mode .modal-content {
+  background: #1e293b;
+  color: #f8fafc;
+}
+
+body.dark-mode .modal-content .form-control,
+body.dark-mode .modal-content .form-select {
+  background: #0f172a;
+  color: #f8fafc;
+  border-color: #475569;
+}
+
+body.dark-mode .modal-content .form-control::placeholder {
+  color: #94a3b8;
+}
