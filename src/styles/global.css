@@ -1,0 +1,953 @@
+/* =========================
+   Global Reset
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   Body
+========================= */
+
+body {
+  background-color: #f5f6fa;
+  color: #212529;
+  font-family: Arial, Helvetica, sans-serif;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================
+   Dark Mode
+========================= */
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+
+/* =========================
+   Dark Mode - Cards
+========================= */
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+
+/* =========================
+   Dark Mode - Text
+========================= */
+
+body.dark-mode .text-muted {
+  color: #adb5bd !important;
+}
+
+
+/* =========================
+   Dark Mode - Form Inputs
+========================= */
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-color: #444;
+}
+
+body.dark-mode .form-control::placeholder {
+  color: #999;
+}
+
+
+/* =========================
+   Dark Mode - Modal
+========================= */
+
+body.dark-mode .modal-content {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-mode .modal-header,
+body.dark-mode .modal-footer {
+  border-color: #444;
+}
+
+
+/* =========================
+   Dark Mode - Column
+========================= */
+
+body.dark-mode .column {
+  background-color: #1a1a1a;
+}
+
+
+/* =========================
+   Smooth Transitions
+========================= */
+
+.card,
+.column,
+.form-control,
+.form-select,
+.modal-content {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* =========================
+   Dark Mode Toggle
+========================= */
+
+.theme-toggle-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle {
+  position: relative;
+
+  min-width: 125px;
+  height: 40px;
+
+  border: none;
+  border-radius: 25px;
+
+  padding: 0 14px;
+
+  cursor: pointer;
+
+  background: #f1f3f5;
+  color: #343a40;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.theme-toggle:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 14px rgba(0, 0, 0, 0.18);
+}
+
+.theme-toggle.active {
+  background: #212529;
+  color: #ffffff;
+}
+
+.theme-label {
+  position: relative;
+  z-index: 2;
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   Navbar
+========================= */
+
+.navbar {
+  min-height: 64px;
+}
+
+.navbar-logo {
+  font-size: 1.25rem;
+  letter-spacing: 0.3px;
+
+  transition: transform 0.2s ease;
+}
+
+.navbar-logo:hover {
+  transform: translateY(-1px);
+}
+
+.logo-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  margin-right: 8px;
+
+  border-radius: 8px;
+
+  background: #0d6efd;
+  color: white;
+
+  font-size: 16px;
+}
+
+
+/* =========================
+   Navigation Links
+========================= */
+
+.nav-custom-link {
+  position: relative;
+
+  padding: 8px 14px !important;
+
+  color: rgba(255, 255, 255, 0.75) !important;
+
+  font-weight: 500;
+
+  border-radius: 8px;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.nav-custom-link:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* =========================
+   Login Button
+========================= */
+
+.login-btn {
+  color: #ffffff !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  border-radius: 8px;
+
+  font-weight: 500;
+
+  transition: all 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #ffffff;
+  color: #212529 !important;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   Register Button
+========================= */
+
+.register-btn {
+  background-color: #0d6efd;
+  color: #ffffff !important;
+
+  border: 1px solid #0d6efd;
+
+  border-radius: 8px;
+
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+
+  box-shadow:
+    0 3px 8px rgba(13, 110, 253, 0.25);
+}
+
+.register-btn:hover {
+  background-color: #0b5ed7;
+  border-color: #0b5ed7;
+
+  color: #ffffff !important;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 12px rgba(13, 110, 253, 0.35);
+}
+
+
+/* =========================
+   Navbar Page Buttons
+========================= */
+
+.nav-page-btn {
+  color: #ffffff !important;
+
+  background: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: all 0.2s ease;
+}
+
+.nav-page-btn:hover {
+  background-color: #ffffff;
+  color: #212529 !important;
+
+  border-color: #ffffff;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   Main Content
+========================= */
+
+.main-content {
+  width: 100%;
+  min-width: 0;
+
+  padding: 24px;
+
+  background-color: #f5f6fa;
+
+  transition:
+    background-color 0.3s ease;
+}
+
+
+/* =========================
+   Dark Mode - Main Content
+========================= */
+
+body.dark-mode .main-content {
+  background-color: #121212;
+}
+
+
+/* =========================
+   Settings Back Button
+========================= */
+
+.settings-back-btn {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 9px 16px;
+
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #495057;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.2s ease;
+}
+
+.settings-back-btn:hover {
+  background: #212529;
+  border-color: #212529;
+  color: #ffffff;
+
+  transform: translateX(-2px);
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.back-arrow {
+  font-size: 18px;
+  line-height: 1;
+
+  transition: transform 0.2s ease;
+}
+
+.settings-back-btn:hover .back-arrow {
+  transform: translateX(-3px);
+}
+
+
+/* =========================
+   Dark Mode - Settings
+========================= */
+
+body.dark-mode .settings-back-btn {
+  background: #1e1e1e;
+  border-color: #444;
+  color: #f5f5f5;
+}
+
+body.dark-mode .settings-back-btn:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #212529;
+}
+
+
+/* =========================
+   Responsive Navbar
+========================= */
+
+@media (max-width: 991px) {
+
+  .navbar-nav {
+    padding-top: 12px;
+    padding-bottom: 8px;
+  }
+
+  .nav-custom-link {
+    width: 100%;
+    padding: 10px 12px !important;
+  }
+
+  .login-btn,
+  .register-btn,
+  .nav-page-btn {
+    width: 100%;
+    text-align: center;
+
+    margin-left: 0 !important;
+  }
+}
+
+
+/* =========================
+   Responsive Main Content
+========================= */
+
+@media (max-width: 768px) {
+
+  .main-content {
+    padding: 20px;
+  }
+}
+
+
+@media (max-width: 576px) {
+
+  .main-content {
+    padding: 16px;
+  }
+
+  .theme-toggle {
+    min-width: 110px;
+    height: 38px;
+
+    font-size: 13px;
+  }
+}
+/* =========================
+   Profile
+========================= */
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #0d6efd;
+  color: #ffffff;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  box-shadow:
+    0 6px 15px rgba(13, 110, 253, 0.25);
+}
+
+body.dark-mode .profile-avatar {
+  box-shadow:
+    0 6px 15px rgba(13, 110, 253, 0.35);
+}
+/* =========================
+   Authentication Pages
+========================= */
+
+.auth-page {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(13, 110, 253, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(111, 66, 193, 0.18),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #f5f7fb,
+      #eef2f7
+    );
+}
+
+
+/* Card */
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+
+  padding: 38px;
+
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.12);
+
+  backdrop-filter: blur(10px);
+
+  animation: authCardAnimation 0.4s ease;
+}
+
+
+/* Card Animation */
+
+@keyframes authCardAnimation {
+
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* Logo */
+
+.auth-logo {
+  display: inline-flex;
+  align-items: center;
+
+  color: #212529;
+
+  text-decoration: none;
+
+  font-size: 1.35rem;
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+.auth-logo:hover {
+  color: #0d6efd;
+}
+
+
+/* Inputs */
+
+.auth-input {
+  min-height: 46px;
+
+  border-radius: 10px;
+
+  border: 1px solid #dee2e6;
+
+  transition: all 0.2s ease;
+}
+
+.auth-input:focus {
+  border-color: #0d6efd;
+
+  box-shadow:
+    0 0 0 3px rgba(13, 110, 253, 0.12);
+}
+
+
+/* Main Button */
+
+.auth-main-btn {
+  min-height: 46px;
+
+  border-radius: 10px;
+
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+}
+
+.auth-main-btn:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 6px 15px rgba(13, 110, 253, 0.25);
+}
+
+
+/* Links */
+
+.auth-link {
+  color: #0d6efd;
+
+  text-decoration: none;
+
+  font-weight: 600;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+
+/* Back Button */
+
+.auth-back-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 18px;
+
+  border-radius: 9px;
+
+  border: 1px solid #dee2e6;
+
+  background: #ffffff;
+
+  color: #495057;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+}
+
+.auth-back-btn:hover {
+  background: #212529;
+
+  border-color: #212529;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   Dark Mode
+========================= */
+
+body.dark-mode .auth-page {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(13, 110, 253, 0.20),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(111, 66, 193, 0.18),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #0f1115,
+      #171a21
+    );
+}
+
+
+body.dark-mode .auth-card {
+  background: rgba(30, 30, 30, 0.96);
+
+  border-color: rgba(255, 255, 255, 0.06);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+
+body.dark-mode .auth-logo {
+  color: #ffffff;
+}
+
+
+body.dark-mode .auth-input {
+  background: #292929;
+
+  color: #ffffff;
+
+  border-color: #444;
+}
+
+
+body.dark-mode .auth-input::placeholder {
+  color: #999;
+}
+
+
+body.dark-mode .auth-input:focus {
+  border-color: #0d6efd;
+}
+
+
+body.dark-mode .auth-back-btn {
+  background: #242424;
+
+  border-color: #444;
+
+  color: #f5f5f5;
+}
+
+
+body.dark-mode .auth-back-btn:hover {
+  background: #ffffff;
+
+  border-color: #ffffff;
+
+  color: #212529;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 576px) {
+
+  .auth-page {
+    padding: 25px 15px;
+  }
+
+  .auth-card {
+    padding: 28px 22px;
+
+    border-radius: 18px;
+  }
+
+}
+/* =========================
+   Modern Home Background
+========================= */
+
+.home-page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(13, 110, 253, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(111, 66, 193, 0.16),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 50% 90%,
+      rgba(25, 135, 84, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #f8faff,
+      #eef4ff,
+      #f8f5ff,
+      #effaf6
+    );
+
+  background-size:
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    400% 400%;
+
+  animation: homeBackground 15s ease infinite;
+
+  transition:
+    background 0.5s ease,
+    color 0.3s ease;
+
+  overflow: hidden;
+}
+
+
+/* Background Animation */
+
+@keyframes homeBackground {
+
+  0% {
+    background-position:
+      0% 50%,
+      100% 50%,
+      50% 100%,
+      0% 50%;
+  }
+
+  25% {
+    background-position:
+      30% 30%,
+      70% 40%,
+      30% 80%,
+      50% 50%;
+  }
+
+  50% {
+    background-position:
+      100% 50%,
+      0% 50%,
+      70% 20%,
+      100% 50%;
+  }
+
+  75% {
+    background-position:
+      70% 70%,
+      30% 20%,
+      50% 90%,
+      50% 100%;
+  }
+
+  100% {
+    background-position:
+      0% 50%,
+      100% 50%,
+      50% 100%,
+      0% 50%;
+  }
+
+}
+/* =========================
+   Home Cards
+========================= */
+
+.home-page .card {
+  border: 1px solid rgba(255, 255, 255, 0.7) !important;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.home-page .card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.12) !important;
+}
+
+
+/* Feature Cards */
+
+.home-page .row.g-4 .card:hover {
+  transform: translateY(-7px);
+}
+
+
+/* CTA */
+
+.home-page .bg-primary {
+  box-shadow:
+    0 15px 35px rgba(13, 110, 253, 0.25);
+}
+/* =========================
+   Home Dark Mode
+========================= */
+
+body.dark-mode .home-page {
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(13, 110, 253, 0.22),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(111, 66, 193, 0.20),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 50% 90%,
+      rgba(25, 135, 84, 0.14),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #0d1117,
+      #111827,
+      #171225,
+      #0d1713
+    );
+
+  background-size:
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    400% 400%;
+
+  animation: homeBackground 15s ease infinite;
+}
+
+
+body.dark-mode .home-page .card {
+
+  background: rgba(30, 30, 30, 0.78);
+
+  border-color: rgba(255, 255, 255, 0.08) !important;
+
+  color: #ffffff;
+}
