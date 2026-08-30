@@ -1,0 +1,5 @@
+[33mcommit d368479d62ec1953f3563079927af4eee5ac48a6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: dulajtheekshana68 <dulajtheekshana68@gmail.com>
+Commit: dulajtheekshana68 <dulajtheekshana68@gmail.com>
+
+    Initial backend setup with authentication and Board CRUD
